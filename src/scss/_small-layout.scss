@@ -1,0 +1,154 @@
+// @import '../../node_modules/bootstrap/scss/mixins';
+@include media-breakpoint-down(lg) {
+ 
+  .header-container {
+    flex-direction: column;
+    justify-content: center;
+    gap: 5rem;
+    height: 35rem;
+    .head-l {
+      padding: 0 2rem;
+      margin-top: 3rem;
+      width: 100vw;
+    }
+  }
+  .nav-boundary a,
+  .nav-boundary a:hover {
+    color: $white;
+  }
+  .header-media {
+    width: 10rem;
+  }
+  .navbar-toggler:focus {
+    outline: none;
+  }
+  .res-flex{
+   flex-direction: column;
+   
+  }
+  .bd-sidebar {
+    display: none;
+  }
+  #subnav {
+    background-color: $gray-300;
+    padding: 0.5rem;
+    z-index: 3; 
+  }
+
+  #content {
+    margin-top: 2rem;
+  }
+  .docu-box {
+    margin: 8rem 1rem 0 1rem;
+  }
+  // code box styling start
+  .code-container {
+    background-color: $gray-100;
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+    margin: 1rem 0;
+    width: inherit;
+
+    font-size: 0.75rem;
+    line-height: 1.2;
+  }
+  .bd-main {
+    padding-left: 0rem;
+  }
+  .navbar-toggler:focus,
+  .navbar-toggler:active {
+    box-shadow: none;
+    outline: none;
+  }
+  .offcanvas {
+    background-color: $gray-800;
+  }
+  
+  .sub-nav {
+    color: $white;
+    background-color: transparent;
+  }
+  .sub-toggler{
+    background-color: transparent;
+  }
+  .rotate-90 {
+    transform: rotate(90deg);
+  }
+
+  .navbar-toggler-icon {
+    color: $white;
+  }
+  #submenu-icon {
+    color: $green;
+  }
+  .sub-nav:hover {
+    color: $gray-300;
+  }
+  .subbd-sidebar {
+    width: 18rem;
+    overflow-y: auto;
+
+    max-height: calc(
+      100vh - 56px
+    ); /* adjust the value according to your needs */
+  }
+  .pre-container {
+    margin: 1rem 0;
+    width: inherit;
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
+      'Courier New', monospace;
+
+    .pre-code {
+      background-color: $white;
+      white-space: pre-wrap;
+      overflow: auto;
+      text-overflow: ellipsis;
+      font-size: 12px;
+      word-wrap: break-word;
+    }
+  }
+  .pre-codex {
+    width: inherit;
+    .codex {
+      white-space: break-spaces;
+      background-color: $gray-100;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+  .invisi{
+    display: none;
+    
+  }
+  #accordionId {
+    min-width: 21rem;
+    font-size: 12px;
+  }
+
+  .footer-content p{
+    font-size: 12px;
+  }
+  .footer-media {
+    width: 2rem;
+  } 
+ 
+}
+
+// Navbar collapse style
+.navbar-collapse {
+  --animate-duration: 0.3s;
+  animation-duration: var(--animate-duration);
+  animation-fill-mode: both;
+  animation-name: slideInRight;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

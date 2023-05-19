@@ -1,0 +1,144 @@
+// @import '../../node_modules/bootstrap/scss/mixins';
+@include media-breakpoint-up(lg) {
+  h1 {
+    font-weight: 400;
+  }
+  body {
+    background-color: $gray-100;
+  } 
+  .nav-boundary {
+    margin-left: 4rem;
+    color: $white;
+  }
+  .nav-boundary a,
+  .nav-boundary a:hover {
+    color: $white;
+  }
+  #subnav {
+    display: none;
+  }
+
+  .nav {
+    width: 11rem;
+  }
+  .header-media {
+    margin-right: 5rem;
+    width: 25rem;
+  }
+  .navbar-toggler-icon {
+    background-image: none;
+    content: '';
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    outline: none;
+  }
+
+  .docu-box {
+    width: fit-content;
+    margin: 0 5rem;
+  }
+  // code box styling start
+  .code-container {
+    background-color: $gray-100;
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+    margin: 1rem 0;
+    width: inherit;
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
+      'Courier New', monospace;
+    font-size: 0.875rem;
+    line-height: 1.5;
+
+    code {
+      white-space: break-spaces;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 80%;
+      padding-right: 0.5rem;
+
+      word-wrap: break-word;
+    }
+  }
+  .copy-container {
+    color: $green;
+    border-radius: 0.25rem;
+    width: 2rem;
+    height: 2rem;
+    margin-left: auto;
+    cursor: pointer;
+
+    i {
+      font-size: 1rem;
+    }
+  }
+  // code box styling end
+
+  .rotate-90 {
+    transform: rotate(90deg);
+  }
+  .sub-nav i.rotate-90 {
+    transform: rotate(90deg);
+  }
+
+  .bd-main {
+    background-color: $white;
+    padding-top: 4rem;
+  }
+  .bd-sidebar {
+    margin-top: 3rem;
+    width: 18rem;
+    overflow-y: auto;
+    max-height: calc(
+      100vh - 56px
+    ); /* adjust the value according to your needs */
+  }
+ 
+  .pre-container {
+    margin: 1rem 0;
+    width: 50rem;
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
+      'Courier New', monospace;
+    font-size: 0.875rem;
+    // line-height: 1.5;
+    .pre-code {
+      background-color: $white;
+      white-space: break-spaces;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      word-wrap: break-word;
+    }
+  }
+  .pre-codex {
+    .codex {
+      background-color: $gray-100;
+      width: 50rem;
+      padding: 0rem;
+    }
+  }
+  
+  .footer-media {
+    width: 2rem;
+  }
+  #accordionId {
+    font-size: 14px;
+  }
+}
+
+.block{
+  display: block;
+}
+.res-flex{
+  display: flex;
+ 
+}
+.flex{
+  display: flex;
+}
+.flx-col{
+  flex-direction: column;
+}
