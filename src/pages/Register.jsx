@@ -2,6 +2,7 @@ import React from 'react'
 import { RegisterFormLayout, OnboardRegister  } from '../layouts';
 
 
+
 const Register = () => {
    
   return (

@@ -1,13 +1,22 @@
+import React, { useEffect } from 'react';
 import { Container, Image } from 'react-bootstrap';
+import { useDispatch, useSelector } from 'react-redux';
+import { getUser} from '../features/auth/userInfoSlice';
 import HeroSvg from '../assets/svg/hero.svg';
 const Hero = () => {
+  const dispatch = useDispatch();
+  const {  user } = useSelector((state) => state.userInfo);
   const backgroundImageStyle = {
     backgroundRepeat: 'repeat-x',
     backgroundSize: 'contain',
     backgroundImage: `url(${HeroSvg})`,
-    height: '10rem',
+    height: '20rem',
     width: '100vw',
   };
+
+  useEffect(() => {
+    dispatch(getUser());
+  }, [dispatch]);
 
   return (
     <div >
@@ -30,19 +39,19 @@ const Hero = () => {
         <Container> 
         <h5 className='fw-bold'>First Name</h5>
         <div className=' fs-6 fw-bold  border rounded py-2 px-5 d-flex justify-content-start align-items-center'>
-        <p>First Name</p>
+        <p>{user && user.firstName}</p>
         </div>
         </Container>
         <Container> 
         <h5 className='fw-bold'>Last Name</h5>
         <div className=' fs-6 fw-bold  border rounded py-2 px-5 d-flex justify-content-start align-items-center'>
-        <p>Last Name</p>
+        <p>{user && user.lastName}</p>
         </div>
         </Container>
         <Container> 
         <h5 className='fw-bold'>API Key</h5>
         <div className=' fs-6 fw-bold  border rounded py-2 px-5 d-flex justify-content-start align-items-center'>
-        <p>873535y598292985u3928952</p>
+        {user && user.apiKey}
         </div>
         </Container>
        

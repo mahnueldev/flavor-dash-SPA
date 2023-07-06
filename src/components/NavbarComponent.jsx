@@ -1,20 +1,34 @@
-import React, { useState } from 'react';
-import { Navbar, Nav, Container, Button, Offcanvas, Dropdown,DropdownButton } from 'react-bootstrap';
+import React, { useState, useEffect } from 'react';
+import { Navbar, Nav, Container, Button, Offcanvas, Dropdown } from 'react-bootstrap';
 import logo from '../assets/images/logo.png';
 import { RxHamburgerMenu } from 'react-icons/rx';
 import { FaUser} from 'react-icons/fa';
 import { VscClose } from 'react-icons/vsc';
+import { documentation, github } from '../assets/data/links';
+import { useDispatch, useSelector } from 'react-redux';
+import { getUser, logout} from '../features/auth/userInfoSlice';
+import { Link } from 'react-router-dom';
 
 const NavbarComponent = () => {
   const [show, setShow] = useState(false);
-
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  const dispatch = useDispatch();
+  const {  user } = useSelector((state) => state.userInfo);
+
+  useEffect(() => {
+    dispatch(getUser());
+  }, [dispatch]);
+
+  const handleLogout = () => {
+    dispatch(logout());
+    // Additional logout actions or navigation can be performed here
+  };
 
   return (
-    <Navbar expand='lg' className='d-flex justify-content-center' id='navbar'>
+    <Navbar expand='lg' className='d-flex justify-content-center ' id='navbar' fixed='top'>
       <Container fluid className='nav-boundary'>
-        <Navbar.Brand href='index.html'>
+        <Navbar.Brand as={Link} to="/">
           <img
             src={logo}
             alt='Logo'
@@ -41,7 +55,7 @@ const NavbarComponent = () => {
         >
           <Offcanvas.Header>
             <Offcanvas.Title id='offcanvasNavbarLabel'>
-              Offcanvas
+              Flavor Dash
             </Offcanvas.Title>
             <Navbar.Toggle
               className='border-0 btn text-white'
@@ -56,7 +70,7 @@ const NavbarComponent = () => {
             <Nav className='ms-auto mb-2 mb-lg-0 me-5'>
               <Nav.Item className='me-4'>
                 <Nav.Link
-                  href='introduction.html'
+                  href={documentation}
                   className='active text-white'
                 >
                   Documentation
@@ -64,7 +78,7 @@ const NavbarComponent = () => {
               </Nav.Item>
               <Nav.Item className='d-lg-none'>
                 <Nav.Link
-                  href='https://github.com/mahnueldev/flavor-dash'
+                  href={github}
                   target='_blank'
                   rel='noreferrer'
                 >
@@ -79,13 +93,13 @@ const NavbarComponent = () => {
         </Offcanvas>
         <Nav className='ms-auto mb-2 mb-lg-0 me-5 d-none d-lg-flex d-flex justify-content-between align-items-center'>
           <Nav.Item className='me-4'>
-            <Nav.Link href='introduction.html' className='active text-white'>
+            <Nav.Link href={documentation} className='active text-white'>
               Documentation
             </Nav.Link>
           </Nav.Item>
           <Nav.Item>
             <Nav.Link
-              href='https://github.com/mahnueldev/flavor-dash'
+              href={github}
               target='_blank'
               rel='noreferrer'
               className='me-4'
@@ -100,9 +114,11 @@ const NavbarComponent = () => {
             <FaUser className="menu-icon"/>
           </Dropdown.Toggle>
           <Dropdown.Menu align="end" className="dropdown-menu-lg-end bgc-black ">    
-      <Dropdown.Item href="#">Hello</Dropdown.Item>
-      <Dropdown.Item href="#">Settings</Dropdown.Item>
-      <Dropdown.Item href="#">Logout</Dropdown.Item>
+      <Dropdown.Item >Hello {user && user.firstName}!</Dropdown.Item>
+      <Dropdown.Item as={Link} to="/settings">
+  Settings
+</Dropdown.Item>
+      <Dropdown.Item  onClick={handleLogout}>Logout</Dropdown.Item>
       </Dropdown.Menu>
       </Dropdown>
    
