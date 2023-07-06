@@ -1,7 +1,8 @@
 import axios from 'axios';
 import { getAuthToken, removeAuthToken } from '../../utils/AuthToken';
 
-const BASE_URL = 'http://localhost:8080';
+// const BASE_URL = 'http://localhost:8080';
+const BASE_URL = 'https://determined-blue-cloak.cyclic.app';
 
 // Existing api instance
 export default  axios.create({
