@@ -1,5 +1,5 @@
-@import "../../node_modules/bootstrap/scss/variables";
-// @import '~bootstrap/scss/bootstrap/scss/variables';
+
+
 $blue: #22007c;
 $indigo: #6610f2;
 $purple: #6f42c1;
@@ -75,13 +75,7 @@ $theme-colors: (
   'dark': $dark,
 );
 
-$accordion-bg: $purple;
-$accordion-button-bg: $purple;
-$accordion-button-active-bg: $purple;
 
 
-$custom-colors:(
-    "navy-blue": #22007C
-);
 
-$theme-colors: map-merge($theme-colors, $custom-colors);
+

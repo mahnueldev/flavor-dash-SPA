@@ -1,4 +1,5 @@
-import '../src/css/styles.min.css';
+// import '../src/css/styles.min.css';
+import '../src/scss/styles.scss'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Home, Settings, Login, Register, ResetPassword, ForgotPassword } from './pages/index';
 import RequireAuth from './utils/RequireAuth';
