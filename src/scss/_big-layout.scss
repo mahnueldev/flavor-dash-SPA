@@ -41,40 +41,8 @@
     width: fit-content;
     margin: 0 5rem;
   }
-  // code box styling start
-  .code-container {
-    background-color: $gray-100;
-    border-radius: 0.25rem;
-    padding: 0.5rem;
-    margin: 1rem 0;
-    width: inherit;
-    font-family: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
-      'Courier New', monospace;
-    font-size: 0.875rem;
-    line-height: 1.5;
-
-    code {
-      white-space: break-spaces;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      max-width: 80%;
-      padding-right: 0.5rem;
-
-      word-wrap: break-word;
-    }
-  }
-  .copy-container {
-    color: $green;
-    border-radius: 0.25rem;
-    width: 2rem;
-    height: 2rem;
-    margin-left: auto;
-    cursor: pointer;
-
-    i {
-      font-size: 1rem;
-    }
-  }
+  
+  
   // code box styling end
 
   .rotate-90 {
@@ -97,28 +65,7 @@
     ); /* adjust the value according to your needs */
   }
  
-  .pre-container {
-    margin: 1rem 0;
-    width: 50rem;
-    font-family: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
-      'Courier New', monospace;
-    font-size: 0.875rem;
-    // line-height: 1.5;
-    .pre-code {
-      background-color: $white;
-      white-space: break-spaces;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      word-wrap: break-word;
-    }
-  }
-  .pre-codex {
-    .codex {
-      background-color: $gray-100;
-      width: 50rem;
-      padding: 0rem;
-    }
-  }
+  
   
   .footer-media {
     width: 2rem;

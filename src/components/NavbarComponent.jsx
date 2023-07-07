@@ -67,6 +67,7 @@ const NavbarComponent = () => {
             </Navbar.Toggle>
           </Offcanvas.Header>
           <Offcanvas.Body >
+          <div >Hello {user && user.firstName}!</div>
             <Nav className='ms-auto mb-2 mb-lg-0 me-5'>
               <Nav.Item className='me-4'>
                 <Nav.Link
@@ -87,6 +88,13 @@ const NavbarComponent = () => {
                   </Button>
                 </Nav.Link>
               </Nav.Item>
+                
+      
+      <Nav.Link as={Link} to="/settings">
+  Settings
+</Nav.Link>
+      <Nav.Link  onClick={handleLogout}>Logout</Nav.Link>
+   
           
             </Nav>
           </Offcanvas.Body>

@@ -40,20 +40,8 @@
   .docu-box {
     margin: 8rem 1rem 0 1rem;
   }
-  // code box styling start
-  .code-container {
-    background-color: $gray-100;
-    border-radius: 0.25rem;
-    padding: 0.5rem;
-    margin: 1rem 0;
-    width: inherit;
 
-    font-size: 0.75rem;
-    line-height: 1.2;
-  }
-  .bd-main {
-    padding-left: 0rem;
-  }
+ 
   .navbar-toggler:focus,
   .navbar-toggler:active {
     box-shadow: none;
@@ -91,30 +79,7 @@
       100vh - 56px
     ); /* adjust the value according to your needs */
   }
-  .pre-container {
-    margin: 1rem 0;
-    width: inherit;
-    font-family: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
-      'Courier New', monospace;
-
-    .pre-code {
-      background-color: $white;
-      white-space: pre-wrap;
-      overflow: auto;
-      text-overflow: ellipsis;
-      font-size: 12px;
-      word-wrap: break-word;
-    }
-  }
-  .pre-codex {
-    width: inherit;
-    .codex {
-      white-space: break-spaces;
-      background-color: $gray-100;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-  }
+  
   .invisi{
     display: none;
     
