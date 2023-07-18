@@ -125,7 +125,7 @@ const RegisterFormLayout = () => {
 
         <p className='mt-5 mb-5'>
           Already have an account?{' '}
-          <Link to='./login' className='text-btn-pri-in'>
+          <Link to='/login' className='text-btn-pri-in'>
             Login
           </Link>
         </p>
